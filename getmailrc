@@ -1,0 +1,19 @@
+[retriever]
+type = SimpleIMAPSSLRetriever
+server = mail.enea.com
+port = 993
+username = maxin
+password = passowrdpasswordpassword :)
+mailboxes = ( "INBOX", )
+
+[destination]
+type = MDA_external
+path = /usr/bin/procmail
+unixfrom = True
+
+[options]
+verbose = 0
+message_log = ~/.getmail/log
+received = False
+read_all = False
+delete = False
