@@ -1,0 +1,17 @@
+[user]
+	name = Maxin B. John
+	email = maxin.john@enea.com
+[core]
+        editor = vim
+[color]
+        status = auto
+        branch = auto
+        diff = auto
+[alias]
+        ci = commit
+        up = pull --rebase
+        whatsnew = log @{upstream}.. --stat
+        l = !git --no-pager log origin/master..HEAD --abbrev-commit --pretty=oneline
+        st = status
+	lol = log --oneline --graph --date=short --pretty=format:'%C(yellow)%h%Creset :%C(blue)%ad %Creset-%C(yellow)%d%Creset %s %C(bold green)<%an>%Creset' --abbrev-commit
+	logg = log --cherry-pick --date=short --pretty=format:'%Cred%m%Creset %<(8,trunc)%C(yellow)%h %Creset- %C(blue)%ad %Cgreen%<(20,trunc)%an%Creset: %s'
