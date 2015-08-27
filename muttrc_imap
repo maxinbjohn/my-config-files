@@ -1,0 +1,33 @@
+set folder=imaps://majo@mail.enea.com/
+set spoolfile=+INBOX
+set record="=Sent Items"
+set postponed="=Drafts"
+set header_cache = ~/.cache/mutt
+set smtp_url=smtp://smtp.enea.se/
+set mail_check=60
+set timeout=10
+set ssl_starttls=yes
+set imap_keepalive=10
+
+set from="maxin.john@enea.com"
+set realname="Maxin B. John"
+
+set sort=threads
+set collapse_unread="yes"
+set uncollapse_jump="yes"
+
+set index_format="%Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %?M?+& ?%s"
+
+auto_view text/html
+
+bind index "G" last-entry
+bind index <left> previous-entry
+bind index <right> next-entry
+bind index <S-right> collapse-thread
+bind index <S-left> collapse-thread
+bind index a noop
+bind index A create-alias
+
+bind pager "G" bottom
+
+folder-hook . 'exec collapse-all'
